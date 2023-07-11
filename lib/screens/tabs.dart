@@ -79,16 +79,15 @@ class _TabScreenState extends ConsumerState<TabScreen> {
               tabBorderRadius: 12,
               curve: Curves.easeInCubic,
               duration: const Duration(milliseconds: 700),
+              tabBorder: Border.all(
+                  color: Theme.of(context).colorScheme.background, width: 1),
               rippleColor: Theme.of(context).colorScheme.background,
               color: Theme.of(context).colorScheme.onPrimaryContainer,
               activeColor: Theme.of(context).colorScheme.primary,
               tabBackgroundGradient: LinearGradient(
                 colors: [
                   Theme.of(context).colorScheme.background,
-                  Theme.of(context)
-                      .colorScheme
-                      .primaryContainer
-                      .withOpacity(0.2),
+                  Theme.of(context).colorScheme.primary.withOpacity(0.2),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
